@@ -116,6 +116,19 @@ for i in range(srt-1): # Задаем перебор значений
     print(maxall) # Найденный максимум - то самое произведение из условия
 
 # 27985
+# Пункт А решаем как 17-ю
+srt = open('27-A.txt')
+n = []
+mx = 0
+for a in srt:
+    n.append(int(a))
+for i in range(len(n)-1):
+    for j in range(i+1, len(n)):
+        if n[i]*n[j]%14==0:
+            mx = max(n[i]*n[j], mx)
+            print(mx)
+
+# А вот Б уже по-человечески
 srt = int(input())
 mx2=mx7=mx14=mx=maxall=0
 n = int(input())
